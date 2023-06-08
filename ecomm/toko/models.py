@@ -18,6 +18,9 @@ PILIHAN_LABEL = (
 PILIHAN_PEMBAYARAN = (
     ('P', 'Paypal'),
     ('S', 'Stripe'),
+    ('D', 'Transfer Bank'),
+    ('E', 'E-Wallet'),
+    ('K', 'Kartu Kredit'),
 )
 
 User = get_user_model()

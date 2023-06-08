@@ -5,6 +5,9 @@ from django_countries.widgets import CountrySelectWidget
 PILIHAN_PEMBAYARAN = (
     ('P', 'Paypal'),
     ('S', 'Stripe'),
+    ('D', 'Transfer Bank'),
+    ('E', 'E-Wallet'),
+    ('K', 'Kartu Kredit'),
 )
 
 class CheckoutForm(forms.Form):

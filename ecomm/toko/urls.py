@@ -14,4 +14,5 @@ urlpatterns = [
      path('paypal-return/', views.paypal_return, name='paypal-return'),
      path('paypal-cancel/', views.paypal_cancel, name='paypal-cancel'),
      path('search/', views.HomeListView.as_view(), name='search'),
+     path('kontak/', views.KontakView.as_view(), name='kontak'),
 ]
