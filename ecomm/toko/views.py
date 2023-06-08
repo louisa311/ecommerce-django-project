@@ -8,6 +8,7 @@ from django.views import generic
 from paypal.standard.forms import PayPalPaymentsForm
 from django.db.models import Q
 from django.views.generic import ListView
+from django.views import View
 
 from .forms import CheckoutForm
 from .models import ProdukItem, OrderProdukItem, Order, AlamatPengiriman, Payment
@@ -101,8 +102,14 @@ class CheckoutView(LoginRequiredMixin, generic.FormView):
                 order.save()
                 if opsi_pembayaran == 'P':
                     return redirect('toko:payment', payment_method='paypal')
-                else:
+                elif opsi_pembayaran == 'S':
                     return redirect('toko:payment', payment_method='stripe')
+                elif opsi_pembayaran == 'T':
+                    return redirect('toko:payment', payment_method='transfer bank')
+                elif opsi_pembayaran == 'E':
+                    return redirect('toko:payment', payment_method='e-wallet')
+                else:
+                    return redirect('toko:payment', payment_method='kartu kredit')
 
             messages.warning(self.request, 'Gagal checkout')
             return redirect('toko:checkout')
@@ -250,3 +257,7 @@ def paypal_return(request):
 def paypal_cancel(request):
     messages.error(request, 'Pembayaran dibatalkan')
     return redirect('toko:order-summary')
+
+class KontakView(View):
+    def get(self, request):
+        return render(request, 'kontak.html')

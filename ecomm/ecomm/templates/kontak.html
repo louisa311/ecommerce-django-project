@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="row justify-content-center">
+        <head>
+            <title>Kontak</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <style>
+                body {
+                    background-color: #f8f9fa;
+                }
+        
+                .contact-container {
+                    max-width: 500px;
+                    margin: 50px auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+        
+                .contact-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+        
+                .contact-item i {
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="contact-container">
+                <h1 class="text-center mb-4">Kontak</h1>
+        
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h5>Telepon</h5>
+                        <p>+62 123 4567 890</p>
+                    </div>
+                </div>
+        
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h5>Email</h5>
+                        <p>info@example.com</p>
+                    </div>
+                </div>
+        
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h5>WhatsApp</h5>
+                        <p>+62 123 4567 890</p>
+                    </div>
+                </div>
+        
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <div>
+                        <h5>Instagram</h5>
+                        <p>@your_username</p>
+                    </div>
+                </div>
+        
+                <div class="contact-item">
+                    <i class="fab fa-facebook"></i>
+                    <div>
+                        <h5>Facebook</h5>
+                        <p>facebook.com/your_username</p>
+                    </div>
+                </div>
+        
+                <div class="contact-item">
+                    <i class="fab fa-twitter"></i>
+                    <div>
+                        <h5>Twitter</h5>
+                        <p>@your_username</p>
+                    </div>
+                </div>
+        
+                <div class="contact-item">
+                    <i class="fab fa-youtube"></i>
+                    <div>
+                        <h5>YouTube</h5>
+                        <p>youtube.com/your_username</p>
+                    </div>
+                </div>
+            </div>
+        
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        </body>
+  </div>
+</div>
+
+{% endblock content %}

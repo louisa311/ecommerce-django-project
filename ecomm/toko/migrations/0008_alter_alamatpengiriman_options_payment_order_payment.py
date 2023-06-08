@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('amount', models.FloatField()),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('payment_option', models.CharField(choices=[('P', 'Paypal'), ('S', 'Stripe')], max_length=1)),
+                ('payment_option', models.CharField(choices=[('P', 'Paypal'), ('S', 'Stripe'), ('T', 'Transfer Bank'), ('E', 'E-Wallet'), ('K', 'Kartu Kredit')], max_length=1)),
                 ('charge_id', models.CharField(max_length=50)),
                 ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
             ],
